@@ -1,0 +1,91 @@
+
+  <form #feedbackForm="ngForm" (ngSubmit)="onSubmit(feedbackForm)">
+  <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="feedbackService.selectedFeedback._id">
+  <input type="text" name="name" #name="ngModel" [(ngModel)]="feedbackService.selectedFeedback.name"  required>
+  <input type="text" name="position" #name="ngModel" [(ngModel)]="feedbackService.selectedFeedback.position">
+  <input type="text" name="office" #name="ngModel" [(ngModel)]="feedbackService.selectedFeedback.office">
+  <input type="text" name="salary" #name="ngModel" [(ngModel)]="feedbackService.selectedFeedback.salary" required>
+
+ 
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap" rel="stylesheet">
+
+    <title>Feed</title>
+  </head>
+  <body>
+  
+
+  <div class="content">
+    
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          
+
+          <div class="row justify-content-center">
+            <div class="col-md-6">
+              
+              <h3 class="heading mb-4">Let's talk about everything!</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas debitis, fugit natus?</p>
+
+              <p><img src="https://cdni.iconscout.com/illustration/premium/thumb/education-feedback-6771602-5639833.png" alt="Image" class="img-fluid"></p>
+
+
+            </div>
+            <div class="col-md-6">
+              
+              <form class="mb-5" #feedbackForm="ngForm" (ngSubmit)="onSubmit(feedbackForm)">
+                <div class="row">
+                  <div class="col-md-12 form-group">
+                    <input type="text" class="form-control" name="name" #name="ngModel" [(ngModel)]="feedbackService.selectedFeedback.name"  required placeholder="Your name">
+              
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 form-group">
+                    <input type="text" class="form-control"  name="position" #name="ngModel" [(ngModel)]="feedbackService.selectedFeedback.position" placeholder="Email">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 form-group">
+                    <input type="text" class="form-control" name="office" #name="ngModel" [(ngModel)]="feedbackService.selectedFeedback.office" placeholder="Subject">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 form-group">
+                    <textarea class="form-control" name="salary" #name="ngModel" [(ngModel)]="feedbackService.selectedFeedback.salary" required placeholder="Write Us here"></textarea>
+                  </div>
+                </div>  
+                <div class="row">
+                  <div class="col-12">
+			              <button class="btn btn-primary rounded-0 py-2 px-4"type="submit"  (click)="feedbackForm">Submit</button>
+
+                  <span class="submitting"></span>
+                  </div>
+                </div>
+              </form>
+
+              <div id="form-message-warning mt-4"></div> 
+              <div id="form-message-success">
+                Your message was sent, thank you!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+    
+  </body>
+</html> 
