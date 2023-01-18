@@ -4,13 +4,13 @@ var multiparty = require('multiparty');
 const Order = require("./model/order");
 
 const app = express();
-const PORT = 4000;
+const PORT = 3000;
 const IMAGE_UPLOAD_DIR = "./public/images"
-const IMAGE_BASE_URL = "http://localhost:4000/images/"
+const IMAGE_BASE_URL = "http://localhost:3000/images/"
 
 app.use(express.static("public"));
 
-app.get("/", async (req, res) => {
+app.get("/orders", async (req, res) => {
     try {
         const orders = await Order.find({});
         res.send(orders)
