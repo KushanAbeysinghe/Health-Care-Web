@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<style>
+	table,
+	th,
+	td {
+		border: 1px solid black;
+	}
+
+	img {
+  max-width: 40%;
+  height: auto;
+}
+</style>
+
+<head>
+	<title>Table 03</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<h4 class="text-center mb-4">CUSTOMER FEEDACKS</h4><br><br><br><br>
+					<div class="table-wrap">
+						<table class="table"><br><br><br><br><br>
+
+							<thead class="thead-primary">
+								<tr>
+									<th>Name</th>
+									<th>Surname</th>
+									<th>Address</th>
+									<th>Email</th>
+									<th>Phone</th>
+									<th>Age</th>
+									<th>Avatar</th>
+								</tr>
+								<tr *ngFor="let orders of orderData ">
+									<td>{{orders.name}}</td>
+									<td>{{orders.surname}}</td>
+									<td>{{orders.address}}</td>
+									<td>{{orders.email}}</td>
+									<td>{{orders.phone}}</td>
+									<td>{{orders.age}}</td>
+									<!-- <td><img src="{{orders.image}}"></td> -->
+								</tr>
+								
