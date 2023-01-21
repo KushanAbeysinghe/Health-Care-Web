@@ -16,9 +16,14 @@ router.get('/',(req, res) => {
 router.post('/',(req,res) =>{
     var emp = new Employee({
         name: req.body.name,
-        position: req.body.position,
-        office: req.body.office,
-        salary: req.body.salary,
+        surname: req.body.surname,
+        address: req.body.address,
+        email: req.body.email,
+        phone: req.body.phone,
+        age: req.body.age,
+        image: req.body.image
+
+
     });
     emp.save((err, doc) => {
         if (!err) { res.send(doc); }  

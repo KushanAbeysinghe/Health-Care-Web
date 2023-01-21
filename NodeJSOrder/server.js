@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 var multiparty = require('multiparty');
 const Order = require("./model/order");
+const cors = require('cors');
 
 const app = express();
 const PORT = 3000;
@@ -9,6 +10,7 @@ const IMAGE_UPLOAD_DIR = "./public/images"
 const IMAGE_BASE_URL = "http://localhost:3000/images/"
 
 app.use(express.static("public"));
+app.use(cors({ origin: 'http://localhost:4200' }));
 
 app.get("/orders", async (req, res) => {
     try {
@@ -23,7 +25,7 @@ app.get("/orders", async (req, res) => {
 
 });
 
-app.post("/add-order", async (req, res) => {
+app.post("/orders", async (req, res) => {
     var form = new multiparty.Form({ uploadDir: IMAGE_UPLOAD_DIR });
 
     form.parse(req, async function (err, fields, files) {
@@ -38,10 +40,13 @@ app.post("/add-order", async (req, res) => {
         console.log(imageURL);
 
         const order = new Order({
-            title: fields.title[0],
-            price: fields.price[0],
-            status: fields.status[0],
-            image: imageURL
+            name: fields.name[0],
+            surname: fields.surname[0],
+            address: fields.address[0],
+            email: fields.email[0],
+            phone: fields.phone[0],
+            age: fields. age[0],
+             image: imageURL
 
         })
         try {

@@ -1,15 +1,27 @@
 const mongoose = require("mongoose");
 
 const orderSchema = new  mongoose.Schema({
-    title:{
+    name:{
         type:String,
         require: true,
     },
-    price:{
+    surname:{
         type:String,
         require: true,
     },
-    status:{
+    address:{
+        type:String,
+        require: true,
+    },
+    email:{
+        type:String,
+        require: true,
+    },
+    phone:{
+        type:String,
+        require: true,
+    },
+    age:{
         type:String,
         require: true,
     },
