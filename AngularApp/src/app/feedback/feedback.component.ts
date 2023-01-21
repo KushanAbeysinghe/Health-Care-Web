@@ -38,9 +38,10 @@ export class FeedbackComponent implements OnInit {
     if (form.value._id == "") {
       this.feedbackService.postFeedback(form.value).subscribe((res) => {
         this.resetForm(form);
-        location.reload();
+        //location.reload();
         this.refreshEmployeeList();
-       M.toast({ html: 'Saved successfully', classes: 'rounded' });
+        console.warn(res)
+     //  M.toast({ html: 'Saved successfully', classes: 'rounded' });
       });
     }
   }

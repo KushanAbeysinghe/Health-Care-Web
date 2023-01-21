@@ -1,10 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
-import { map } from 'rxjs/operators';
-import { switchMap } from 'rxjs/operators'
-
-import { Order } from './order.model';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Order } from '../interfaces/order';
 
 
 
@@ -12,10 +9,8 @@ import { Order } from './order.model';
   providedIn: 'root'
 })
 export class OrderService {
-  selectedOrder: Order;
-  orders!: Order[];
   readonly baseURL = 'http://localhost:3000/orders';
-  
+
 
   constructor(private http: HttpClient) { }
 
@@ -23,10 +18,18 @@ export class OrderService {
     return this.http.get(`${this.baseURL}`) as unknown as Observable<Order[]>;
   }
 
-  postallOrder(order: Order) {
-    return this.http.post(this.baseURL, order);
+  postOrderSettingsForm(orderSettings: Order): Observable<Order> {
+
+    const httpHeaders = new HttpHeaders({
+      'content-type':'application/json',
+      'Authorization': 'myheaderson@12'
+    });
+
+    return this.http.post<Order>('http://localhost:3000/orders', orderSettings);
+    
+
   }
-  
+
 
 }
 

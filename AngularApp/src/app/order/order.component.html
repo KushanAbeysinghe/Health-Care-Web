@@ -1,30 +1,158 @@
-<!-- <br><br><br><br><br><form #orderForm="ngForm" (ngSubmit)="onSubmit(orderForm)">
-  <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="orderService.selectedOrder._id"> -->
-  <!-- <input type="text" name="name" #name="ngModel" [(ngModel)]="orderService.selectedOrder.name"  required>
-  <input type="text" name="surname" #name="ngModel" [(ngModel)]="orderService.selectedOrder.surname">
-  <input type="text" name="address" #name="ngModel" [(ngModel)]="orderService.selectedOrder.address">
-  <input type="text" name="email" #name="ngModel" [(ngModel)]="orderService.selectedOrder.email" required>
-  <input type="text" name="phone" #name="ngModel" [(ngModel)]="orderService.selectedOrder.phone" required>
-  <input type="text" name="age" #name="ngModel" [(ngModel)]="orderService.selectedOrder.age" required>
+<br><br><br><br><br><br><form #ordersendForm="ngForm" (ngSubmit)="onSubmit(ordersendForm)" > <br>
+  <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="ordersendService.selectOrdersend._id"> 
+  <input type="text" name="name" #name="ngModel" [(ngModel)]="ordersendService.selectOrdersend.name"  required><br>
+  <input type="text" name="surname" #name="ngModel" [(ngModel)]="ordersendService.selectOrdersend.surname"><br>
+  <input type="text" name="address" #name="ngModel" [(ngModel)]="ordersendService.selectOrdersend.address"><br>
+  <input type="text" name="email" #name="ngModel" [(ngModel)]="ordersendService.selectOrdersend.email" required><br>
+  <input type="text" name="phone" #name="ngModel" [(ngModel)]="ordersendService.selectOrdersend.phone"><br>
+  <input type="text" name="age" #name="ngModel" [(ngModel)]="ordersendService.selectOrdersend.age"><br>
+  <input type="text" name="image" #name="ngModel" [(ngModel)]="ordersendService.selectOrdersend.image"><br>
+  <button type="submit" >Submit</button> 
+  <button type="button" (click)="resetForm(ordersendForm)">reset</button> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <br><br><br><br><br><br><form #orderForm="ngForm" (ngSubmit)="onSubmit(orderForm)"> -->
+  <!-- <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="postorderService.selectPostorder ._id"> -->
+  <!-- <input type="text" name="name" #name="ngModel" [(ngModel)]="postorderService.selectPostorder.name"  required><br>
+  <input type="text" name="surname" #name="ngModel" [(ngModel)]="postorderService.selectPostorder.surname"><br>
+  <input type="text" name="address" #name="ngModel" [(ngModel)]="postorderService.selectPostorder.address"><br>
+  <input type="text" name="email" #name="ngModel" [(ngModel)]="postorderService.selectPostorder.email" required><br>
+  <input type="text" name="phone" #name="ngModel" [(ngModel)]="postorderService.selectPostorder.phone" required><br>
+  <input type="text" name="age" #name="ngModel" [(ngModel)]="postorderService.selectPostorder.age" required><br> -->
+  <!-- <input type="text" name="image" #name="ngModel" [(ngModel)]="postorderService.selectPostorder.image" required><br> -->
+
+  <!-- <button type="submit"  (click)="orderForm">Submit1</button> -->
+
+<!-- 
+</form>
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap" rel="stylesheet">
+
+    <title>Feed</title>
+  </head>
+  <body>
   
 
+  <div class="content">
+    
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          
+
+          <div class="row justify-content-center">
+            <div class="col-md-6">
+              
+              <h3 class="heading mb-4">Let's talk about everything!</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas debitis, fugit natus?</p>
+
+              <p><img src="https://cdni.iconscout.com/illustration/premium/thumb/education-feedback-6771602-5639833.png" alt="Image" class="img-fluid"></p>
 
 
-  <form class="mb-5" #orderForm="ngForm" (ngSubmit)="onSubmit(orderForm)">
+            </div>
+            <div class="col-md-6">
+              
+              <form class="mb-5" #feedbackForm="ngForm" (ngSubmit)="onSubmit(feedbackForm)">
+                <div class="row">
+                  <div class="col-md-12 form-group">
+                    <input type="text" class="form-control" name="name" #name="ngModel" [(ngModel)]="postorderService.selectPostorder.name"  required placeholder="Your name">
+              
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 form-group">
+                    <input type="text" class="form-control"  name="surname" #name="ngModel" [(ngModel)]="postorderService.selectPostorder.surname" placeholder="Email">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 form-group">
+                    <input type="text" class="form-control" name="address" #name="ngModel" [(ngModel)]="postorderService.selectPostorder.address" placeholder="Subject">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 form-group">
+                    <textarea class="form-control" name="email" #name="ngModel" [(ngModel)]="postorderService.selectPostorder.email" required placeholder="Write Us here"></textarea>
+                  </div>
+                </div>  
+                <div class="row">
+                  <div class="col-md-12 form-group">
+                    <textarea class="form-control" name="phone" #name="ngModel" [(ngModel)]="postorderService.selectPostorder.phone" required placeholder="Write Us here"></textarea>
+                  </div>
+                </div> 
+                <div class="row">
+                  <div class="col-md-12 form-group">
+                    <textarea class="form-control" name="age" #name="ngModel" [(ngModel)]="postorderService.selectPostorder.age" required placeholder="Write Us here"></textarea>
+                  </div>
+                </div> 
+                <div class="row">
+                  <div class="col-md-12 form-group">
+                    <textarea class="form-control" name="image" #name="ngModel" [(ngModel)]="postorderService.selectPostorder.image" required placeholder="Write Us here"></textarea>
+                  </div>
+                </div> 
+ 
+                <div class="row">
+                  <div class="col-12">
+			              <button class="btn btn-primary rounded-0 py-2 px-4"type="submit"  (click)="orderForm">Submit</button>
 
-        <input type="text" class="form-control" name="name" #name="ngModel" [(ngModel)]="orderService.selectedOrder.name"  required placeholder="Your name">
-  
-        <input type="text" class="form-control"  name="surname" #name="ngModel" [(ngModel)]="orderService.selectedOrder.surname" placeholder="Email">
-     
-        <input type="text" class="form-control" name="address" #name="ngModel" [(ngModel)]="orderService.selectedOrder.address" placeholder="Subject">
-        <input type="text" class="form-control" name="email" #name="ngModel" [(ngModel)]="orderService.selectedOrder.email" placeholder="Subject">
- 
-        <input type="text" class="form-control" name="phone" #name="ngModel" [(ngModel)]="orderService.selectedOrder.phone" placeholder="Subject">
- 
-        <input type="text" class="form-control" name="age" #name="ngModel" [(ngModel)]="orderService.selectedOrder.age" placeholder="Subject">
- 
- 
-       
-        <button class="btn btn-primary rounded-0 py-2 px-4"type="submit"  (click)="orderForm">Submit</button>
+                  <span class="submitting"></span>
+                  </div>
+                </div>
+              </form>
 
- --> 
+              <div id="form-message-warning mt-4"></div> 
+              <div id="form-message-success">
+                Your message was sent, thank you!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+    
+  </body>
+</html>  -->

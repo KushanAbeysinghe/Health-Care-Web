@@ -1,5 +1,5 @@
 export class Order {
-    _id: string 
+    // _id: string 
     name: string 
     surname:String
     address:String
