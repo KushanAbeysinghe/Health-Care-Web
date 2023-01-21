@@ -1,14 +1,111 @@
-<br><br><br><br><br><br><form #ordersendForm="ngForm" (ngSubmit)="onSubmit(ordersendForm)" > <br>
-  <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="ordersendService.selectOrdersend._id"> 
-  <input type="text" name="name" #name="ngModel" [(ngModel)]="ordersendService.selectOrdersend.name"  required><br>
-  <input type="text" name="surname" #name="ngModel" [(ngModel)]="ordersendService.selectOrdersend.surname"><br>
-  <input type="text" name="address" #name="ngModel" [(ngModel)]="ordersendService.selectOrdersend.address"><br>
-  <input type="text" name="email" #name="ngModel" [(ngModel)]="ordersendService.selectOrdersend.email" required><br>
-  <input type="text" name="phone" #name="ngModel" [(ngModel)]="ordersendService.selectOrdersend.phone"><br>
-  <input type="text" name="age" #name="ngModel" [(ngModel)]="ordersendService.selectOrdersend.age"><br>
-  <input type="text" name="image" #name="ngModel" [(ngModel)]="ordersendService.selectOrdersend.image"><br>
-  <button type="submit" >Submit</button> 
-  <button type="button" (click)="resetForm(ordersendForm)">reset</button> 
+<!doctype html>
+  <html lang="en">
+
+  <head>
+    <title>Contact Form 09</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+  </head>
+
+  <body>
+    <section class="ftco-section">
+      <div class="container">
+
+        <div class="row justify-content-center">
+          <div class="col-lg-10 col-md-12">
+            <div class="wrapper">
+              <div class="row justify-content-center">
+
+                <div class="col-lg-8">
+                  <div class="contact-wrap">
+                    <h3 class="mb-4 text-center">PLACE YOUR ORDER HERE NOW!</h3>
+                    <div id="form-message-warning" class="mb-4 w-100 text-center"></div>
+                    <div id="form-message-success" class="mb-4 w-100 text-center">
+                      Your message was sent, thank you!
+                    </div>
+                    <form #ordersendForm="ngForm" (ngSubmit)="onSubmit(ordersendForm)">
+                      <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="ordersendService.selectOrdersend._id">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" placeholder="Name" class="form-control" name="name" #name="ngModel"
+                              [(ngModel)]="ordersendService.selectOrdersend.name" required>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label for="surname">Surname:</label>
+                            <input type="email" class="form-control" name="surname" #name="ngModel"
+                              [(ngModel)]="ordersendService.selectOrdersend.surname" required>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label for="address">Address:</label>
+                            <input type="text" class="form-control" name="address" #name="ngModel"
+                              [(ngModel)]="ordersendService.selectOrdersend.address" required>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="text" class="form-control" name="email" #name="ngModel"
+                              [(ngModel)]="ordersendService.selectOrdersend.email" required>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label for="phone">Phone Number:</label>
+                            <input type="text" class="form-control" name="phone" #name="ngModel"
+                              [(ngModel)]="ordersendService.selectOrdersend.phone"  required>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label for="age">Age:</label>
+                            <input type="text" class="form-control" name="age" #name="ngModel"
+                              [(ngModel)]="ordersendService.selectOrdersend.age" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="image">Upload Your Prescription Here:</label>
+                            <input type="file" class="form-control" name="image" #name="ngModel"
+                              [(ngModel)]="ordersendService.selectOrdersend.image" required>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <input type="submit" value="Place Order Now" [disabled]="!ordersendForm.valid" class="btn btn-primary">
+                            <div class="submitting"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/main.js"></script>
+
+  </body>
+
+  </html>
 
 
 
@@ -45,9 +142,7 @@
 
 
 
-
-
-<!-- <br><br><br><br><br><br><form #orderForm="ngForm" (ngSubmit)="onSubmit(orderForm)"> -->
+  <!-- <br><br><br><br><br><br><form #orderForm="ngForm" (ngSubmit)="onSubmit(orderForm)"> -->
   <!-- <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="postorderService.selectPostorder ._id"> -->
   <!-- <input type="text" name="name" #name="ngModel" [(ngModel)]="postorderService.selectPostorder.name"  required><br>
   <input type="text" name="surname" #name="ngModel" [(ngModel)]="postorderService.selectPostorder.surname"><br>
@@ -59,7 +154,7 @@
 
   <!-- <button type="submit"  (click)="orderForm">Submit1</button> -->
 
-<!-- 
+  <!-- 
 </form>
 
 
