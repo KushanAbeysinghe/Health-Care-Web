@@ -1,26 +1,44 @@
 <!doctype html>
 <html lang="en">
-<style>
-	table,
-	th,
-	td {
-		border: 1px solid black;
-	}
-
-	img {
-  max-width: 40%;
-  height: auto;
-}
-</style>
 
 <head>
-	<title>Table 03</title>
+	<title>Table 07</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<style>
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+
+		table {
+
+			counter-reset: row-num;
+			width: 10%;
+		}
+
+		table tr {
+			counter-increment: row-num;
+		}
+
+		table tr td:first-child::before {
+			content: counter(row-num) ". ";
+		}
+
+		th {
+			text-align: center;
+		}
+
+		td {
+			text-align: left;
+		}
+		
+	</style>
 
 
 </head>
@@ -30,32 +48,70 @@
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-6 text-center mb-5">
-
+					<h2 class="heading-section">Orders</h2>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<h4 class="text-center mb-4">CUSTOMER FEEDACKS</h4><br><br><br><br>
 					<div class="table-wrap">
-						<table class="table"><br><br><br><br><br>
-
-							<thead class="thead-primary">
+						<table class="table table-bordered table-dark table-hover center">
+							<thead>
 								<tr>
+									<th>OrderNo</th>
 									<th>Name</th>
 									<th>Surname</th>
 									<th>Address</th>
 									<th>Email</th>
 									<th>Phone</th>
 									<th>Age</th>
-									<th>Avatar</th>
+									<th>Prescription</th>
+									<th>Accpet</th>
+									<th>Reject</th>
+									<th>Ready</th>
+
+
+
 								</tr>
+
 								<tr *ngFor="let orders of orderData ">
+									<td></td>
 									<td>{{orders.name}}</td>
 									<td>{{orders.surname}}</td>
 									<td>{{orders.address}}</td>
 									<td>{{orders.email}}</td>
 									<td>{{orders.phone}}</td>
 									<td>{{orders.age}}</td>
-									<td><img src="{{orders.image}}"></td>
+									<td><img src="{{orders.image}}" id="myImg"></td>
+									<th><button  class="button"><img
+												src="https://uxwing.com/wp-content/themes/uxwing/download/checkmark-cross/accept-icon.png"
+												alt="buttonpng" /></button></th>
+									<th><button class="button"><img src="https://cdn-icons-png.flaticon.com/512/66/66847.png"
+												alt="buttonpng" /></button></th>
+									<th><button class="button"><img src="https://cdn-icons-png.flaticon.com/512/4947/4947506.png"
+												alt="buttonpng" /></button></th>
+
+
 								</tr>
-								
+							</thead>
+						</table>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+ 
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/popper.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+
+
+
+
+</body>
+
+</html>
