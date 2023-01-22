@@ -12,6 +12,9 @@ import { Order } from '../sharedorder/order.model';
 })
 export class AdminordersComponent {
 
+  msg: string;
+ 
+
   orderData: Array<Order> = []
 
   constructor(public orderService: OrderService) {
@@ -19,10 +22,34 @@ export class AdminordersComponent {
       (response) => {
         console.log(response)
         this.orderData = response;
+        
       }
     )
   }
+  //   clickEvent() {
+  //     this.msg = "Button is Clicked";
+  //     return this.msg;
+  //     console.log("msg");
+  //   }
+  // }
+  acceptbutton() {
+      // form.reset();
+      this.msg = "Button is Clicked";
+          // return this.msg
+          console.log("msg");
+   
+  }
+
+
 }
+
+
+
+  // accept(){
+  //   console.log("hey")
+
+  // }
+
 
 
 

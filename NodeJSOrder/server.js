@@ -9,6 +9,9 @@ const PORT = 3000;
 const IMAGE_UPLOAD_DIR = "./public/images"
 const IMAGE_BASE_URL = "http://localhost:3000/images/"
 
+
+
+
 app.use(express.static("public"));
 app.use(cors({ origin: 'http://localhost:4200' }));
 
@@ -78,5 +81,7 @@ mongoose.connect("mongodb://127.0.0.1/CrudDB", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).then(() => console.log("conncted to DB")).catch(err => console.log("Connection Failed"))
+
+
 
 

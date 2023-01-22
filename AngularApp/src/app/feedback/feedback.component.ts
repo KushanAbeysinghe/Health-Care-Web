@@ -31,6 +31,7 @@ export class FeedbackComponent implements OnInit {
       office: "",
       salary:""
     }
+   
   }
 
 
