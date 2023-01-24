@@ -27,9 +27,9 @@ export class FeedbackComponent implements OnInit {
     this.feedbackService.selectedFeedback = {
       _id: "",
       name: "",
-      position: "",
-      office: "",
-      salary:""
+      email: "",
+      subject: "",
+      feedback:""
     }
    
   }

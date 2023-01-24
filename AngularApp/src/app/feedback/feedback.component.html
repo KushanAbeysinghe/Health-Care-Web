@@ -2,9 +2,9 @@
   <form #feedbackForm="ngForm" (ngSubmit)="onSubmit(feedbackForm)">
   <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="feedbackService.selectedFeedback._id">
   <input type="text" name="name" #name="ngModel" [(ngModel)]="feedbackService.selectedFeedback.name"  required>
-  <input type="text" name="position" #name="ngModel" [(ngModel)]="feedbackService.selectedFeedback.position">
-  <input type="text" name="office" #name="ngModel" [(ngModel)]="feedbackService.selectedFeedback.office">
-  <input type="text" name="salary" #name="ngModel" [(ngModel)]="feedbackService.selectedFeedback.salary" required>
+  <input type="text" name="email" #name="ngModel" [(ngModel)]="feedbackService.selectedFeedback.email">
+  <input type="text" name="subject" #name="ngModel" [(ngModel)]="feedbackService.selectedFeedback.subject">
+  <input type="text" name="feedback" #name="ngModel" [(ngModel)]="feedbackService.selectedFeedback.feedback" required>
 
  
 
@@ -53,17 +53,17 @@
                 </div>
                 <div class="row">
                   <div class="col-md-12 form-group">
-                    <input type="text" class="form-control"  name="position" #name="ngModel" [(ngModel)]="feedbackService.selectedFeedback.position" placeholder="Email">
+                    <input type="text" class="form-control"  name="email" #name="ngModel" [(ngModel)]="feedbackService.selectedFeedback.email" placeholder="Email">
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-12 form-group">
-                    <input type="text" class="form-control" name="office" #name="ngModel" [(ngModel)]="feedbackService.selectedFeedback.office" placeholder="Subject">
+                    <input type="text" class="form-control" name="subject" #name="ngModel" [(ngModel)]="feedbackService.selectedFeedback.subject" placeholder="Subject">
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-12 form-group">
-                    <textarea class="form-control" name="salary" #name="ngModel" [(ngModel)]="feedbackService.selectedFeedback.salary" required placeholder="Write Us here"></textarea>
+                    <textarea class="form-control" name="feedback" #name="ngModel" [(ngModel)]="feedbackService.selectedFeedback.feedback" required placeholder="Write Us here"></textarea>
                   </div>
                 </div>  
                 <div class="row">

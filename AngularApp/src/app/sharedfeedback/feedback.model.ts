@@ -1,7 +1,7 @@
 export class Feedback {
-    _id: string 
-    name: string  
-    position:string  
-    office: string 
-    salary: string
+    _id: string
+    name: string
+    email: string
+    subject: string
+    feedback: string
 }
