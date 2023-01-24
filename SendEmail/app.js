@@ -8,7 +8,7 @@ const acceptedmessage = {
     to:'{{email}}',
     from:'kalukaputa78@gmail.com',
     subject: 'Order status',
-    text: `Your order is being Proccess, Will let you know when its ready. Thank you!`,
+    text: `Your order is being Processed, Will let you know when its ready. Thank you!`,
 };
 
 sgmail.send(acceptedmessage)
@@ -30,7 +30,7 @@ const Readymessage = {
     to:'{{email}}',
     from:'kalukaputa78@gmail.com',
     subject: 'Order status',
-    text: `Your order is ready to pickup.Thank you! `,
+    text: `Your order is ready to pick up.Thank you! `,
 };
 
 sgmail.send(readymessage)
